@@ -1,0 +1,12 @@
+<div>
+  <h2><%= post.title %></h2>
+  <p><%= post.body %></p>
+
+  <ul data-comment-list="<%= post.id %>">
+    <%= render post.comments %>
+  </ul>
+
+  <%= render "comments/form", post: post %>
+</div>
+
+<br><hr><br>

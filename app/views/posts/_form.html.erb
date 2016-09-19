@@ -1,0 +1,9 @@
+<%= form_for @post, remote: true do |post_fields| %>
+  <%= post_fields.label :title %>
+  <%= post_fields.text_field :title %>
+
+  <%= post_fields.label :body %>
+  <%= post_fields.text_field :body %>
+
+  <%= post_fields.submit %>
+<% end %>

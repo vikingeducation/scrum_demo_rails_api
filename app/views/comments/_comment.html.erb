@@ -1,0 +1,8 @@
+<li data-comment-id="<%= comment.id %>">
+  <%= comment.body %>
+  <%= link_to("X", post_comment_path(comment.post_id, comment),
+    data: {
+      comment_destroy: comment.id, comment_parent_id: comment.post_id
+    }
+  ) %>
+</li>

@@ -1,0 +1,4 @@
+(function(){
+  $("[data-comment-list=<%= params[:post_id] %>]").append("<%= escape_javascript(render @comment) %>");
+  $("[data-comment-form=<%= params[:post_id] %>]").find("input").val("");
+})();
