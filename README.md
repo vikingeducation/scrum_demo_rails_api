@@ -1,24 +1,22 @@
-# README
+Rails as an API
+====================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project includes examples of using Rails as an API.
 
-Things you may want to cover:
+- Use of executable `js.erb` files.
+- Use of AJAX with JSON.
+- Implicit and Explicit `respond_to` and `render`
 
-* Ruby version
+## Getting Started
 
-* System dependencies
+Clone this repository and then run the following in the project directory.
 
-* Configuration
+```bash
+$ rake db:create db:migrate
+$ rails s
+```
 
-* Database creation
+Navigate to `localhost:3000` to see the running app. Notice that there are no page reloads after the initial one.
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+**NOTE:** *This repo is copyrighted material for your private use only and not to be shared outside of Viking Code School.*
