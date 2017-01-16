@@ -1,4 +1,10 @@
 class CommentsController < ApplicationController
+  def index
+    @comments = Comment.all
+    respond_to :json
+  end
+
+
   def create
     @comment = parent_post.comments.build(comment_params)
 
@@ -8,6 +14,7 @@ class CommentsController < ApplicationController
 
     respond_to :js
   end
+
 
   def destroy
     @comment = parent_post.comments.find(params[:id])
@@ -20,6 +27,7 @@ class CommentsController < ApplicationController
   def parent_post
     @parent_post ||= Post.find(params[:post_id])
   end
+
 
   def comment_params
     params.require(:comment).permit(:body)

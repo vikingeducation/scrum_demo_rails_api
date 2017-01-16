@@ -1,5 +1,8 @@
+
+
 function deleteComment(event){
   event.preventDefault();
+
   var $comment = $(event.target);
   var url = $comment.attr("href");
 
@@ -14,6 +17,15 @@ function deleteComment(event){
   return false;
 }
 
+
 $(document).ready(function(){
-  $("body").on("click", "[data-comment-destroy]", deleteComment);
+  $("body").on("click", "a[data-comment-destroy]", deleteComment);
 });
+
+
+
+
+
+
+
+

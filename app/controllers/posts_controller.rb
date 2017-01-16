@@ -1,8 +1,12 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.all
-    @post = Post.new
+    respond_to do |format|
+      format.html { @post = Post.new }
+      format.json
+    end
   end
+
 
   def create
     @post = Post.new(post_params)
@@ -14,8 +18,8 @@ class PostsController < ApplicationController
     respond_to :js
   end
 
-  private
 
+  private
   def post_params
     params.require(:post).permit(:title, :body)
   end

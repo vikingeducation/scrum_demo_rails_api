@@ -1,4 +1,10 @@
-(function(){
-  $("[data-comment-list=<%= params[:post_id] %>]").append("<%= escape_javascript(render @comment) %>");
+(function() {
+
+  console.log('BEGIN comments/create.js.erb');
+
+  $("[data-comment-list=<%= params[:post_id] %>]").append("<%= j(render @comment) %>");
   $("[data-comment-form=<%= params[:post_id] %>]").find("input").val("");
+
+  console.log('END comments/create.js.erb');
+
 })();

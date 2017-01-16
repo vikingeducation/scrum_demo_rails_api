@@ -1,6 +1,6 @@
 <%= form_for [post, post.comments.build],
   remote: true,
   data: { comment_form: post.id } do |comment_fields| %>
-  <%= comment_fields.label "Respond" %>
-  <%= comment_fields.text_field :body %>
+    <%= comment_fields.label "Respond" %>
+    <%= comment_fields.text_field :body %>
 <% end %>
